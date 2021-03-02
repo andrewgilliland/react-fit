@@ -1,21 +1,30 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
+import { useAuth } from '../lib/auth';
 
 export default function Home() {
+  const auth = useAuth();
+
   return (
     <div className={styles.container}>
       <Head>
-        <title>react-fit</title>
+        <title>React-Fit</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>ReactFit</h1>
+        <h1 className={styles.title}>React-Fit</h1>
 
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.js</code>
+          Current user:
+          <code>{auth.user ? ` ${auth.user.email}` : 'none'}</code>
         </p>
+
+        {auth.user ? (
+          <button onClick={(e) => auth.signout()}>Sign Out</button>
+        ) : (
+          <button onClick={(e) => auth.signinWithGitHub()}>Sign In</button>
+        )}
       </main>
 
       <footer className={styles.footer}>
@@ -24,7 +33,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{" "}
+          Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
       </footer>
