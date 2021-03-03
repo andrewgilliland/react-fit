@@ -1,11 +1,15 @@
-import { AuthProvider } from '@/lib/auth';
+import 'tailwindcss/tailwind.css';
+
+import Layout from '@/components/Layout';
 import '@/styles/globals.css';
-import "tailwindcss/tailwind.css";
+import { AuthProvider } from '@/lib/auth';
 
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </AuthProvider>
   );
 }
