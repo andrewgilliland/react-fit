@@ -1,12 +1,10 @@
 # React-Fit 🦾
 
----
 
-*React-Fit* is a subscription application to efficiently delivering effective workouts for people.
+*React-Fit* is a subscription application to efficiently deliver effective workouts for people.
 
 ## Why 🤖
 
----
 
 There are many exercise workout platforms out there, but they are bogged down with advertising. 
 
@@ -16,7 +14,6 @@ And since fitness should be accessible to all, the standard tier is 
 
 ## Features 🐳
 
----
 
 ### Landing Page + Signup/Login 🌶️
 
@@ -48,6 +45,5 @@ The dashboard will be available to all subscribers. User information will be abl
 
 ## Implementation 🛸
 
----
 
 *React-Fit* will be implemented on the client with React and Next.js for building the user interface. Secure user management and authentication will done with Firebase Authentication. The user can signup/login with third party login providers (Google and Github) and email as well. All user data will be stored in Firebase Firestore. Payments for subscriptions will be handled with Stripe. The application will utilize TailwindCSS for design. The production application will be hosted and deployed on Vercel.
