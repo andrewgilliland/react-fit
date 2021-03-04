@@ -8,11 +8,10 @@ export default function Home() {
     <div>
       <Head>
         <title>React-Fit</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <div className="font-mono border-2 border-black shadow-offset-green">
+        <div className="font-mono border-2 border-black shadow-offset-green mt-5">
           <div className="bg-black p-6">
             <h1 className="text-2xl text-white font-bold">React-Fit</h1>
 
