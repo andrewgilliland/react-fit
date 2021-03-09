@@ -7,9 +7,9 @@ import { AuthProvider } from '@/lib/auth';
 function MyApp({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <Layout>
+      {/* <Layout> */}
         <Component {...pageProps} />
-      </Layout>
+      {/* </Layout> */}
     </AuthProvider>
   );
 }
