@@ -60,7 +60,7 @@ export default function Navbar() {
               <a>Log In</a>
             </Link>
           </li>
-          <li className="mx-2 bg-green-400 px-8 py-2 text-black">
+          <li className="mx-2 bg-green-400 px-8 py-2 text-black shadow-offset-white hover:bg-green-500">
             <Link href="/membership">
               <a>Subscribe</a>
             </Link>
