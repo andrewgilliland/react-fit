@@ -1,8 +1,9 @@
 import Head from 'next/head';
+import Layout from '@/components/Layout';
 
 export default function About() {
   return (
-    <div>
+    <Layout>
       <Head>
         <title>About</title>
       </Head>
@@ -11,6 +12,6 @@ export default function About() {
           <h1>A subscription designed for your fitness.</h1>
         </header>
       </main>
-    </div>
+    </Layout>
   );
 }

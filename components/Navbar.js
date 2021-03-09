@@ -55,7 +55,11 @@ export default function Navbar() {
           </Link>
         </div>
         <ul className="hidden md:flex items-center">
-          <li className="mx-2">Log In</li>
+          <li className="mx-2">
+            <Link href="/dashboard">
+              <a>Log In</a>
+            </Link>
+          </li>
           <li className="mx-2 bg-green-400 px-8 py-2 text-black">
             <Link href="/membership">
               <a>Subscribe</a>

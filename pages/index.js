@@ -1,11 +1,13 @@
 import Head from 'next/head';
+
 import { useAuth } from '@/lib/auth';
+import Layout from '@/components/Layout';
 
 export default function Home() {
   const auth = useAuth();
 
   return (
-    <div>
+    <Layout>
       <Head>
         <title>React-Fit</title>
       </Head>
@@ -41,6 +43,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-    </div>
+    </Layout>
   );
 }
