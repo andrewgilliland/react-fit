@@ -56,7 +56,7 @@ export default function Navbar() {
         </div>
         <ul className="hidden md:flex items-center">
           <li className="mx-2">
-            <Link href="/dashboard">
+            <Link href="/login">
               <a>Log In</a>
             </Link>
           </li>
