@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 import { useAuth } from '@/lib/auth';
 import Layout from '@/components/Layout';
@@ -44,7 +45,9 @@ export default function Login() {
                   className="bg-green-300 px-8 py-2 text-black border border-black shadow-offset-black mt-3"
                   onClick={(e) => auth.signinWithGoogle()}
                 >
-                  Sign In with Google
+                  <Link href="/dashboard">
+                    <a>Sign In with Google</a>
+                  </Link>
                 </button>
               </div>
             )}

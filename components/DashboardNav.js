@@ -27,6 +27,13 @@ const DashboardNav = () => {
             </Link>
           </li>
           <li className="mx-2">
+            <button onClick={(e) => auth.signout()}>
+              <Link href="/">
+                <a>Sign Out</a>
+              </Link>
+            </button>
+          </li>
+          <li className="mx-2">
             <img className="h-10 w-10 rounded-full" src={auth.user.photoUrl} />
           </li>
         </ul>
