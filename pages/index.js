@@ -33,12 +33,20 @@ export default function Home() {
                 Sign Out
               </button>
             ) : (
-              <button
-                className="bg-green-300 px-8 py-2 text-black border border-black shadow-offset-black mt-3"
-                onClick={(e) => auth.signinWithGitHub()}
-              >
-                Sign In
-              </button>
+              <div className="flex flex-col">
+                <button
+                  className="bg-green-300 px-8 py-2 text-black border border-black shadow-offset-black mt-3"
+                  onClick={(e) => auth.signinWithGitHub()}
+                >
+                  Sign In with GitHub
+                </button>
+                <button
+                  className="bg-green-300 px-8 py-2 text-black border border-black shadow-offset-black mt-3"
+                  onClick={(e) => auth.signinWithGoogle()}
+                >
+                  Sign In with Google
+                </button>
+              </div>
             )}
           </div>
         </div>
