@@ -1,15 +1,13 @@
+import type {AppProps} from 'next/app'
 import 'tailwindcss/tailwind.css';
 
-import Layout from '@/components/Layout';
 import '@/styles/globals.css';
 import { AuthProvider } from '@/lib/auth';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <AuthProvider>
-      {/* <Layout> */}
-        <Component {...pageProps} />
-      {/* </Layout> */}
+      <Component {...pageProps} />
     </AuthProvider>
   );
 }
