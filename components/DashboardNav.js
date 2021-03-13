@@ -22,7 +22,7 @@ const DashboardNav = () => {
         </ul>
         <ul className="hidden md:flex items-center">
           <li className="mx-2">
-            <Link href="/account">
+            <Link href="/dashboard">
               <a>Account</a>
             </Link>
           </li>
