@@ -14,11 +14,6 @@ const DashboardNav = () => {
               <a>Workouts</a>
             </Link>
           </li>
-          <li className="mx-2">
-            <Link href="/programs">
-              <a>Programs</a>
-            </Link>
-          </li>
         </ul>
         <ul className="hidden md:flex items-center">
           <li className="mx-2">
@@ -34,7 +29,7 @@ const DashboardNav = () => {
             </button>
           </li>
           <li className="mx-2">
-            <img className="h-10 w-10 rounded-full" src={auth.user.photoUrl} />
+            <img className="h-10 w-10 rounded-full" src={auth.user?.photoUrl} />
           </li>
         </ul>
       </div>

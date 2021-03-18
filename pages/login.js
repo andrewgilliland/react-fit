@@ -37,6 +37,13 @@ export default function Login() {
               <div className="flex flex-col">
                 <button
                   className="bg-green-300 px-8 py-2 text-black border border-black shadow-offset-black mt-3"
+                >
+                  <Link href="/login/email">
+                    <a>Sign In with Email</a>
+                  </Link>
+                </button>
+                <button
+                  className="bg-green-300 px-8 py-2 text-black border border-black shadow-offset-black mt-3"
                   onClick={(e) => auth.signinWithGitHub()}
                 >
                   <Link href="/dashboard">

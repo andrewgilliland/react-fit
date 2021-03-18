@@ -2,10 +2,12 @@ import Head from 'next/head';
 import useSWR from 'swr';
 
 import fetcher from '../utils/fetcher';
+import { useAuth } from '@/lib/auth';
 import DashboardShell from '@/components/DashboardShell';
 import WorkoutCard from '@/components/WorkoutCard';
 
 export default function Workouts() {
+  const auth = useAuth();
   const { data } = useSWR('/api/workouts', fetcher);
 
   if (!data) {
