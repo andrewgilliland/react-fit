@@ -20,10 +20,41 @@ export default function Membership() {
             vitae expedita? Fugiat qui, quasi similique sit laboriosam
             doloremque hic debitis cum tempora molestiae, natus dolor?
           </p>
-          <button onClick={(e) => createCheckoutSession(user.uid)}>
-            Sign Up
-          </button>
         </header>
+        <section className="flex gap-10 mt-10">
+          <div className="border-2 border-black shadow-offset-green">
+            <div className="bg-black p-6">
+              <h3 className="text-2xl font-bold text-white">Standard Plan</h3>
+            </div>
+            <div className="p-6">
+              <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+              </ul>
+              <Button onClick={(e) => createCheckoutSession(user.uid)}>
+                Sign Up
+              </Button>
+            </div>
+          </div>
+          <div className="border-2 border-black shadow-offset-green">
+            <div className="bg-black p-6">
+              <h3 className="text-2xl font-bold text-white">Warrior Plan</h3>
+            </div>
+            <div className="p-6">
+              <ul>
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+                <li>Feature 3</li>
+                <li>Feature 4</li>
+                <li>Feature 5</li>
+              </ul>
+              <Button onClick={(e) => createCheckoutSession(user.uid)}>
+                Sign Up
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
     </Layout>
   );
