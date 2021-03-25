@@ -17,7 +17,7 @@ const DashboardNav = () => {
         </ul>
         <ul className="hidden md:flex items-center">
           <li className="mx-2">
-            <Link href="/dashboard">
+            <Link href="/account">
               <a>Account</a>
             </Link>
           </li>

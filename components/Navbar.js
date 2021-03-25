@@ -41,11 +41,11 @@ export default function Navbar() {
               <a>About</a>
             </Link>
           </li>
-          <li className="mx-2">
+          {/* <li className="mx-2">
             <Link href="/membership">
               <a>Membership</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
         <div className="mt-2 text-xl font-bold ">
           <Link href="/">
@@ -60,11 +60,11 @@ export default function Navbar() {
               <a>Log In</a>
             </Link>
           </li>
-          <li className="mx-2 bg-green-400 px-8 py-2 text-black border border-black shadow-offset-white hover:bg-green-500">
+          {/* <li className="mx-2 bg-green-400 px-8 py-2 text-black border border-black shadow-offset-white hover:bg-green-500">
             <Link href="/membership">
               <a>Subscribe</a>
             </Link>
-          </li>
+          </li> */}
         </ul>
 
         <button
@@ -137,10 +137,15 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="mx-2">
+              <Link href="/login">
+                <a>Log In</a>
+              </Link>
+            </li>
+            {/* <li className="mx-2">
               <Link href="/membership">
                 <a>Membership</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

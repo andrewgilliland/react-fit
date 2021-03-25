@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Login from './login';
 import Layout from '@/components/Layout';
 import Button from '@/components/Button';
 import { useAuth } from '@/lib/auth';
@@ -6,6 +7,10 @@ import { createCheckoutSession } from '@/lib/db';
 
 export default function Membership() {
   const { user } = useAuth();
+
+  if (!user) {
+    return <Login />;
+  }
 
   return (
     <Layout>
@@ -25,9 +30,10 @@ export default function Membership() {
           <div className="border-2 border-black shadow-offset-green">
             <div className="bg-black p-6">
               <h3 className="text-2xl font-bold text-white">Standard Plan</h3>
+              <p className="text-lg text-green-400 font-bold mt-1">$10/month</p>
             </div>
             <div className="p-6">
-              <ul>
+              <ul className="font-semibold">
                 <li>Feature 1</li>
                 <li>Feature 2</li>
                 <li>Feature 3</li>
@@ -40,9 +46,10 @@ export default function Membership() {
           <div className="border-2 border-black shadow-offset-green">
             <div className="bg-black p-6">
               <h3 className="text-2xl font-bold text-white">Warrior Plan</h3>
+              <p className="text-lg text-green-400 font-bold mt-1">$20/month</p>
             </div>
             <div className="p-6">
-              <ul>
+              <ul className="font-semibold">
                 <li>Feature 1</li>
                 <li>Feature 2</li>
                 <li>Feature 3</li>

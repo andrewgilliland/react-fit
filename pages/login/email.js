@@ -22,6 +22,20 @@ const Login = () => {
       onSubmit={handleSubmit((data) => onLogin(data))}
       //   register={register}
     >
+      {/* <div>
+        <label>Full Name</label>
+        <input
+          autoFocus
+          aria-label="Full Name"
+          id="name"
+          name="name"
+          ref={register({
+            required: 'Please enter your name.'
+          })}
+          placeholder="Full Name"
+        />
+      </div> */}
+
       <div>
         <label>Email Address</label>
         <input
@@ -32,7 +46,7 @@ const Login = () => {
           ref={register({
             required: 'Please enter your email.'
           })}
-          placeholder="name@site.com"
+          placeholder="Email Address"
         />
         <span>{errors.email && errors.email.message}</span>
       </div>
