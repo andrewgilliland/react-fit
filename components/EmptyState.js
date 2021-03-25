@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import DashboardShell from './DashboardShell';
 import Button from './Button';
 import { goToBillingPortal } from '@/lib/db';
 
-import { useAuth } from '@/lib/auth';
-
 const EmptyState = () => {
+  
+  const [isBillingLoading, setBillingLoading] = useState(false);
+
   return (
     <DashboardShell>
       <div className="font-mono border-2 border-black shadow-offset-green mt-5 px-10 py-4">
@@ -19,7 +20,15 @@ const EmptyState = () => {
           </a>
         </Link>
       </div>
-      <Button onClick={(e) => goToBillingPortal()}>View Billing Portal</Button>
+      <Button
+        isLoading={isBillingLoading}
+        onClick={(e) => {
+          setBillingLoading(true);
+          goToBillingPortal();
+        }}
+      >
+        View Billing Portal
+      </Button>
     </DashboardShell>
   );
 };

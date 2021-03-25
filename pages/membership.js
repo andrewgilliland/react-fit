@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Head from 'next/head';
 import Login from './login';
 import Layout from '@/components/Layout';
@@ -7,6 +9,7 @@ import { createCheckoutSession } from '@/lib/db';
 
 export default function Membership() {
   const { user } = useAuth();
+  const [isCheckoutLoading, setCheckoutLoading] = useState(false);
 
   if (!user) {
     return <Login />;
@@ -38,7 +41,13 @@ export default function Membership() {
                 <li>Feature 2</li>
                 <li>Feature 3</li>
               </ul>
-              <Button onClick={(e) => createCheckoutSession(user.uid)}>
+              <Button
+                isLoading={isCheckoutLoading}
+                onClick={(e) => {
+                  setCheckoutLoading(true);
+                  createCheckoutSession(user.uid);
+                }}
+              >
                 Sign Up
               </Button>
             </div>
@@ -56,7 +65,11 @@ export default function Membership() {
                 <li>Feature 4</li>
                 <li>Feature 5</li>
               </ul>
-              <Button onClick={(e) => createCheckoutSession(user.uid)}>
+              <Button
+                onClick={(e) => {
+                  createCheckoutSession(user.uid);
+                }}
+              >
                 Sign Up
               </Button>
             </div>
