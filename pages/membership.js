@@ -29,7 +29,7 @@ export default function Membership() {
             doloremque hic debitis cum tempora molestiae, natus dolor?
           </p>
         </header>
-        <section className="flex gap-10 mt-10">
+        <section className="flex gap-10 my-10">
           <div className="border-2 border-black shadow-offset-green">
             <div className="bg-black p-6">
               <h3 className="text-2xl font-bold text-white">Standard Plan</h3>
