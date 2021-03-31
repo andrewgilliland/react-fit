@@ -8,5 +8,9 @@ export default function Account() {
     return 'Loading...';
   }
 
-  return <EmptyState />;
+  return (
+    <>
+      <EmptyState />
+    </>
+  );
 }

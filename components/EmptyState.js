@@ -5,11 +5,11 @@ import Button from './Button';
 import { goToBillingPortal } from '@/lib/db';
 
 const EmptyState = () => {
-  
   const [isBillingLoading, setBillingLoading] = useState(false);
 
   return (
     <DashboardShell>
+      <h1 className="font-mono font-semibold text-2xl mt-10">My Account</h1>
       <div className="font-mono border-2 border-black shadow-offset-green mt-5 px-10 py-4">
         <h3 className="font-semibold mb-2">You dont't have a membership.</h3>
         <p className="mb-6">💪 Let's get started</p>

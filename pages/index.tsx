@@ -1,6 +1,5 @@
 import Head from 'next/head';
 
-import { useAuth } from '@/lib/auth';
 import Layout from '@/components/Layout';
 
 export default function Home() {

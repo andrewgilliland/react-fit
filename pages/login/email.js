@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import { useAuth } from '@/lib/auth';
 import Layout from '@/components/Layout';
+import Button from '../../components/Button';
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -20,6 +21,7 @@ const Login = () => {
     <form
       errors={errors}
       onSubmit={handleSubmit((data) => onLogin(data))}
+      className="w-64 flex-col items-center"
       //   register={register}
     >
       {/* <div>
@@ -36,25 +38,30 @@ const Login = () => {
         />
       </div> */}
 
-      <div>
-        <label>Email Address</label>
+      <div className="mt-2 flex flex-col border-2 border-black shadow-offset-green">
+        <label className="bg-black text-white font-semibold font-mono p-2">
+          Email Address
+        </label>
         <input
           autoFocus
           aria-label="Email Address"
+          className="p-2 font-mono"
           id="email"
           name="email"
           ref={register({
             required: 'Please enter your email.'
           })}
-          placeholder="Email Address"
         />
         <span>{errors.email && errors.email.message}</span>
       </div>
-      <div>
-        <label>Password</label>
+      <div className="mt-2 flex flex-col border-2 border-black shadow-offset-green">
+        <label className="bg-black text-white font-semibold font-mono p-2">
+          Password
+        </label>
         <input
           aria-label="Password"
           name="pass"
+          className="p-2 font-mono"
           id="password"
           type="password"
           ref={register({
@@ -63,9 +70,9 @@ const Login = () => {
         />
         <span>{errors.pass && errors.pass.message}</span>
       </div>
-      <button id="login" type="submit">
+      <Button id="login" type="submit">
         Login
-      </button>
+      </Button>
     </form>
   );
 };
