@@ -21,7 +21,7 @@ export default function Warrior() {
   //     );
   //   }
 
-  if (user.stripeRole !== 'warrior') {
+  if (user?.stripeRole !== 'warrior') {
     return (
       <DashboardShell>
         <h1 className="font-mono font-semibold text-xl mt-10">

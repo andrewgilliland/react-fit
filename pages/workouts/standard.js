@@ -13,7 +13,7 @@ export default function Standard() {
   const { user } = useAuth();
   const [isBillingLoading, setBillingLoading] = useState(false);
 
-  if (user.stripeRole === 'free') {
+  if (user?.stripeRole === 'free') {
     return (
       <DashboardShell>
         <h1 className="font-mono font-semibold text-xl mt-10">
