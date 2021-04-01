@@ -10,6 +10,7 @@ import { createCheckoutSession } from '@/lib/db';
 export default function Membership() {
   const { user } = useAuth();
   const [isCheckoutLoading, setCheckoutLoading] = useState(false);
+  const [isWarriorLoading, setWarriorLoading] = useState(false);
 
   if (!user) {
     return <Login />;
@@ -29,14 +30,14 @@ export default function Membership() {
             doloremque hic debitis cum tempora molestiae, natus dolor?
           </p>
         </header>
-        <section className="flex gap-10 my-10">
+        <section className="flex gap-10 my-10 justify-center">
           <div className="border-2 border-black shadow-offset-green">
             <div className="bg-black p-6">
               <h3 className="text-2xl font-bold text-white">Standard Plan</h3>
               <p className="text-lg text-green-400 font-bold mt-1">$10/month</p>
             </div>
             <div className="p-6">
-              <ul className="font-semibold">
+              <ul className="font-semibold mb-12">
                 <li>Feature 1</li>
                 <li>Feature 2</li>
                 <li>Feature 3</li>
@@ -45,10 +46,13 @@ export default function Membership() {
                 isLoading={isCheckoutLoading}
                 onClick={(e) => {
                   setCheckoutLoading(true);
-                  createCheckoutSession(user.uid);
+                  createCheckoutSession(
+                    user.uid,
+                    'price_1IWNpGKOxlmL0QgLktFANjlV'
+                  );
                 }}
               >
-                Sign Up
+                Sign Up Now
               </Button>
             </div>
           </div>
@@ -66,11 +70,16 @@ export default function Membership() {
                 <li>Feature 5</li>
               </ul>
               <Button
+                isLoading={isWarriorLoading}
                 onClick={(e) => {
-                  createCheckoutSession(user.uid);
+                  setWarriorLoading(true);
+                  createCheckoutSession(
+                    user.uid,
+                    'price_1IWNaRKOxlmL0QgLlEXlMbO3'
+                  );
                 }}
               >
-                Sign Up
+                Sign Up Now
               </Button>
             </div>
           </div>

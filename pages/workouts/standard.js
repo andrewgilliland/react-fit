@@ -8,37 +8,46 @@ import WorkoutCard from '@/components/WorkoutCard';
 
 export default function Standard() {
   const { user } = useAuth();
-  //   const { data } = useSWR('/api/workouts', fetcher);
 
-  //   if (!data) {
-  //     return (
-  //       <DashboardShell>
-  //         <p>No data!</p>
-  //       </DashboardShell>
-  //     );
-  //   }
-
-  if (user.stripeRole !== 'standard' || user.stripeRole !== 'warrior') {
+  if (user.stripeRole === 'standard' || 'warrior') {
     return (
-      <DashboardShell>
-        <h2 className="font-mono font-semibold text-2xl mt-10">
-          Unauthorized Content
-        </h2>
-        <p>Please go back to your Account page to upgrade your membership.</p>
-      </DashboardShell>
+      <div>
+        <Head>
+          <title>Standard Workouts</title>
+        </Head>
+        <DashboardShell>
+          <h2 className="font-mono font-semibold text-2xl mt-10">
+            Standard Workouts
+          </h2>
+          <section className="grid grid-cols-3 gap-10 mt-6">
+            <WorkoutCard
+              name="Upper Body Blast"
+              date="4/1/21"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis soluta in expedita tenetur possimus?"
+            />
+            <WorkoutCard
+              name="Loaded Legs"
+              date="4/3/21"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis soluta in expedita tenetur possimus?"
+            />
+            <WorkoutCard
+              name="Insane Abs"
+              date="4/5/21"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste perferendis soluta in expedita tenetur possimus?"
+            />
+            
+          </section>
+        </DashboardShell>
+      </div>
     );
   }
 
   return (
-    <div>
-      <Head>
-        <title>React-Fit Standard Workouts</title>
-      </Head>
-      <DashboardShell>
-        <h2 className="font-mono font-semibold text-2xl mt-10">
-          Standard Workouts
-        </h2>
-      </DashboardShell>
-    </div>
+    <DashboardShell>
+      <h2 className="font-mono font-semibold text-2xl mt-10">
+        Unauthorized Content
+      </h2>
+      <p>Please go back to your Account page to upgrade your membership.</p>
+    </DashboardShell>
   );
 }
